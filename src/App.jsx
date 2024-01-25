@@ -1,12 +1,20 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar";
+
+import Home from "./pages/Home/Home";
+import { publicRoute } from "./routes/publicRoute";
 
 function App() {
   return (
     <>
-      <button className="btn btn-info">Info</button>
-      <button className="btn btn-success">Success</button>
-      <button className="btn btn-warning">Warning</button>
-      <button className="btn btn-error">Error</button>
+      <Navbar>
+        <Routes>
+          {publicRoute.map((route) => (
+            <Route path={route.path} element={<route.Component />}></Route>
+          ))}
+        </Routes>
+      </Navbar>
     </>
   );
 }
