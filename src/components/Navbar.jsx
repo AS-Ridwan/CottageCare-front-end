@@ -5,15 +5,15 @@ const Navbar = ({ children }) => {
   return (
     <>
       {/* topbar */}
-      <div className="flex w-full h-10 justify-between items-center flex-wrap px-[273px] bg-secondary">
+      <div className="flex w-full h-10 justify-between items-center flex-wrap px-[273px] bg-gray-400">
         <div>
           <span className="bg-primary p-4 text-accent">NOW HIRING</span>
         </div>
         <div>
-          <span className="text-secondry p-4 bg-gray-200">
+          <span className="text-accent p-4 bg-gray-500">
             CALL CottageCare 1-800-476-7830
           </span>
-          <span className="text-accent p-4 bg-gray-500">Gift Certificates</span>
+          <span className="text-accent py-4  ps-4">Gift Certificates</span>
         </div>
       </div>
       {/* topbar */}
@@ -23,8 +23,10 @@ const Navbar = ({ children }) => {
       <div className="drawer drawer-end">
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
-          <div className="w-screen navbar bg-base-300 px-64">
-            <div className="flex-1 px-2 mx-2">Navbar Title</div>
+          <div className="w-screen navbar bg-accent px-64">
+            <div className="flex-1 px-2 mx-2 font-bold text-2xl">
+              CottageCare
+            </div>
             <div className="flex-none lg:hidden">
               <label
                 htmlFor="my-drawer-3"
