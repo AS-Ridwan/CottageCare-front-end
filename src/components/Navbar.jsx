@@ -1,19 +1,37 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = ({ children }) => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+  );
+
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
+
   return (
     <>
       {/* topbar */}
       <div className="flex w-full h-10 justify-between items-center flex-wrap px-[273px] bg-gray-400">
         <div>
-          <span className="bg-primary p-4 text-accent text-sm">NOW HIRING</span>
+          <span className="bg-primary p-4 text-white text-sm">NOW HIRING</span>
         </div>
         <div>
-          <span className="text-accent  p-4 bg-gray-500 text-sm ">
+          <span className="text-white  p-4 bg-gray-500 text-sm ">
             CALL CottageCare 1-800-476-7830
           </span>
-          <span className="text-accent py-4  ps-4 text-sm">
+          <span className="text-white py-4  ps-4 text-sm">
             Gift Certificates
           </span>
         </div>
@@ -26,7 +44,7 @@ const Navbar = ({ children }) => {
         <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           <div className="w-screen navbar bg-accent px-64">
-            <div className="flex-1 px-2 mx-2 font-bold text-2xl">
+            <div className="flex-1 px-2 mx-2 font-bold text-2xl text-secondary">
               CottageCare
             </div>
             <div className="flex-none lg:hidden">
@@ -58,7 +76,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/"
                     className={({ isActive }) =>
-                      isActive ? "text-white bg-gray-700" : "text-black  "
+                      isActive ? "text-white bg-gray-700" : "text-secondary "
                     }
                   >
                     Home
@@ -68,7 +86,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/service"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-black "
+                      isActive ? "text-white  bg-gray-700" : "text-secondary "
                     }
                   >
                     Services
@@ -78,7 +96,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/about"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-black "
+                      isActive ? "text-white  bg-gray-700" : "text-secondary "
                     }
                   >
                     About
@@ -88,7 +106,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/contact"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-black "
+                      isActive ? "text-white  bg-gray-700" : "text-secondary "
                     }
                   >
                     Contact us
@@ -98,7 +116,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/login"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-black "
+                      isActive ? "text-white  bg-gray-700" : "text-secondary "
                     }
                   >
                     Login
@@ -110,8 +128,10 @@ const Navbar = ({ children }) => {
                     {/* this hidden checkbox controls the state */}
                     <input
                       type="checkbox"
-                      className="theme-controller"
+                      className="theme-controller "
                       value="synthwave"
+                      onChange={handleToggle}
+                      checked={theme === "light" ? false : true}
                     />
 
                     {/* sun icon */}
@@ -125,21 +145,13 @@ const Navbar = ({ children }) => {
 
                     {/* moon icon */}
                     <svg
-                      className="swap-on fill-current w-5 h-5"
+                      className="swap-on fill-current text-secondary w-5 h-5"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
                     >
                       <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
                     </svg>
                   </label>
-                </li>
-                <li>
-                  <button
-                    data-toggle-theme="dark,light"
-                    data-act-class="ACTIVECLASS"
-                  >
-                    Them
-                  </button>
                 </li>
               </ul>
             </div>
