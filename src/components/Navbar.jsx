@@ -161,12 +161,7 @@ const Navbar = ({ children }) => {
                   </NavLink>
                 </li>
                 <li className="ms-2">
-                  <NavLink
-                    to="/login"
-                    className={({ isActive }) =>
-                      isActive ? "!text-white  !bg-gray-700" : "text-secondary "
-                    }
-                  >
+                  <NavLink to="/login" className="!text-accent !bg-secondary">
                     Login
                   </NavLink>
                 </li>
@@ -278,12 +273,12 @@ const Navbar = ({ children }) => {
               </NavLink>
             </li>
             <li className="mt-4 items-center">
-              <NavLink to="/login" className="text-white  bg-gray-700">
+              <NavLink to="/login" className="!text-white  !bg-gray-700">
                 Login
               </NavLink>
             </li>
             <li className="mt-2 items-center">
-              <NavLink to="/login" className="text-white  bg-primary">
+              <NavLink to="/login" className="!text-white  !bg-primary">
                 <span>
                   <PhoneIcon class="h-4 w-4 text-white" />
                 </span>
