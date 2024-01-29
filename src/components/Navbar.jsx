@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import {
+  BeakerIcon,
+  GifIcon,
+  GiftIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/solid";
 
 const Navbar = ({ children }) => {
   const [theme, setTheme] = useState(
@@ -27,13 +33,21 @@ const Navbar = ({ children }) => {
         <div>
           <span className="bg-primary p-4 text-white text-sm">NOW HIRING</span>
         </div>
-        <div>
-          <span className="text-white  p-4 bg-gray-500 text-sm ">
-            CALL CottageCare 1-800-476-7830
-          </span>
-          <span className="text-white py-4  ps-4 text-sm">
-            Gift Certificates
-          </span>
+        <div className="flex">
+          <div className="flex items-center bg-gray-500 py-3 px-2">
+            <span>
+              <PhoneIcon class="h-4 w-4 text-white" />
+            </span>
+            <span className="text-white ms-2   text-sm ">
+              CALL CottageCare 1-800-476-7830
+            </span>
+          </div>
+          <div className="flex items-center ms-5">
+            <span>
+              <GiftIcon class="h-4 w-4 text-white" />
+            </span>
+            <span className="text-white ms-2  text-sm">Gift Certificates</span>
+          </div>
         </div>
       </div>
       {/* topbar */}
@@ -76,7 +90,9 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/"
                     className={({ isActive }) =>
-                      isActive ? "text-white bg-gray-700" : "text-secondary "
+                      isActive
+                        ? "!text-white !bg-gray-700 "
+                        : "text-secondary  "
                     }
                   >
                     Home
@@ -86,7 +102,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/service"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-secondary "
+                      isActive ? "!text-white  !bg-gray-700" : "text-secondary "
                     }
                   >
                     Services
@@ -96,7 +112,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/about"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-secondary "
+                      isActive ? "!text-white  !bg-gray-700" : "text-secondary "
                     }
                   >
                     About
@@ -106,7 +122,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/contact"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-secondary "
+                      isActive ? "!text-white  !bg-gray-700" : "text-secondary "
                     }
                   >
                     Contact us
@@ -116,7 +132,7 @@ const Navbar = ({ children }) => {
                   <NavLink
                     to="/login"
                     className={({ isActive }) =>
-                      isActive ? "text-white  bg-gray-700" : "text-secondary "
+                      isActive ? "!text-white  !bg-gray-700" : "text-secondary "
                     }
                   >
                     Login
