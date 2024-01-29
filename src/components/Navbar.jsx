@@ -38,8 +38,8 @@ const Navbar = ({ children }) => {
             <span>
               <PhoneIcon class="h-4 w-4 text-white" />
             </span>
-            <span className="text-white ms-2    text-sm ">
-              CALL CottageCare 1-800-476-7830
+            <span className="text-white ms-2  text-sm ">
+              CALL CottageCare <a href="tel:1-800-476-7830">1-800-476-7830</a>
             </span>
           </div>
           <div className="flex items-center ms-5">
@@ -213,13 +213,14 @@ const Navbar = ({ children }) => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-100">
+          <ul className="menu p-4 w-80 min-h-full bg-accent">
             {/* Sidebar content here */}
+            {/* close sidebar */}
             <div className="my-8 ms-2">
               <label
                 htmlFor="my-drawer-3"
                 aria-label="close sidebar"
-                className="btn btn-square btn-ghost bg-secondary text-accent"
+                className="btn btn-square btn-ghost bg-gray-700 text-white"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -235,11 +236,59 @@ const Navbar = ({ children }) => {
                 </svg>
               </label>
             </div>
+            {/* close sidebar */}
             <li>
-              <a>Sidebar Items 1</a>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? "!text-white !bg-gray-700 " : "text-secondary  "
+                }
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <a>Sidebar Items 2</a>
+              <NavLink
+                to="/service"
+                className={({ isActive }) =>
+                  isActive ? "!text-white  !bg-gray-700" : "text-secondary "
+                }
+              >
+                Services
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/about"
+                className={({ isActive }) =>
+                  isActive ? "!text-white  !bg-gray-700" : "text-secondary "
+                }
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive ? "!text-white  !bg-gray-700" : "text-secondary "
+                }
+              >
+                Contact us
+              </NavLink>
+            </li>
+            <li className="mt-4 items-center">
+              <NavLink to="/login" className="text-white  bg-gray-700">
+                Login
+              </NavLink>
+            </li>
+            <li className="mt-2 items-center">
+              <NavLink to="/login" className="text-white  bg-primary">
+                <span>
+                  <PhoneIcon class="h-4 w-4 text-white" />
+                </span>
+                Call Now
+              </NavLink>
             </li>
           </ul>
         </div>
