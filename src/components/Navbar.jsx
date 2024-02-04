@@ -161,7 +161,7 @@ const Navbar = ({ children }) => {
                   </NavLink>
                 </li>
                 <li className="ms-2">
-                  <NavLink to="/login" className="!text-white !bg-primary">
+                  <NavLink to="/signup" className="!text-white !bg-primary">
                     SignUp
                   </NavLink>
                 </li>
@@ -274,7 +274,7 @@ const Navbar = ({ children }) => {
             </li>
             <li className="mt-4 items-center">
               <NavLink
-                to="/login"
+                to="/signup"
                 className="
               !text-white  !bg-primary
               "
