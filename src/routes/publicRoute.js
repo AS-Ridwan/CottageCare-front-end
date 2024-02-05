@@ -6,8 +6,8 @@ import Service from "../pages/Service/Service";
 
 export const publicRoute = [
   { path: "/", name: "Home", Component: Home },
-  { path: "/service", name: "Services", Component: Service },
-  { path: "/about", name: "About", Component: About },
+  // { path: "/service", name: "Services", Component: Service },
+  // { path: "/about", name: "About", Component: About },
   { path: "/contact", name: "Contact us", Component: Contact },
   { path: "/signup", name: "Signup", Component: Signup },
 ];
