@@ -3,7 +3,7 @@ import React from "react";
 const Signup = () => {
   return (
     <>
-      <section className=" bg-[url('assets/homeclean.jpg')] bg-center bg-cover  ">
+      <section className=" bg-[url('assets/homeclean.webp')] bg-center bg-cover  ">
         <div className="flex flex-col items-center justify-center px-6 py-8 h-screen mx-auto md:h-[825px] lg:py-0 md:mt-5">
           <div className="w-full bg-accent rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
