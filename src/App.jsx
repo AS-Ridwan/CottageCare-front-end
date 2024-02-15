@@ -7,6 +7,7 @@ import { privateRoutes } from "./routes/privateRoutes";
 import PrivateRoute from "./authentication/PrivateRoute";
 import AdminRoute from "./authentication/AdminRoute";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </Route>
         </Routes>
       </Navbar>
+      <Footer></Footer>
     </>
   );
 }

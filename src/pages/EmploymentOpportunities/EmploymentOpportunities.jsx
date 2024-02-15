@@ -20,9 +20,9 @@ const EmploymentOpportunities = () => {
 
           {/* right side form */}
           {/* right side form */}
-          <div className="flex flex-col items-center  justify-center">
+          <div className="flex flex-col items-center  justify-center ">
             <div className="w-full bg-accent rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 ">
-              <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+              <div className="p-6 space-y-4 md:space-y-6 sm:p-8 ">
                 <h1 className="text-xl font-medium leading-tight tracking-tight text-secondary  md:text-2xl ">
                   Create your account to get full access!
                 </h1>
