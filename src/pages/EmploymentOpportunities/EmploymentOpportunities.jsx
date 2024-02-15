@@ -7,7 +7,7 @@ const EmploymentOpportunities = () => {
     <>
       <section className="w-screen 2xl:px-64 mt-6 ">
         <div>EmploymentOpportunities page</div>
-        <div className=" grid grid-cols-1 sm:grid-cols-2 items-center ">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 items-center my-14 ">
           {/* left side img */}
           {/* left side img */}
           <div className=" flex justify-center lg:justify-start mx-5 lg:mx-0 ">
