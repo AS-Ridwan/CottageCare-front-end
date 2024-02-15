@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   BeakerIcon,
   GifIcon,
@@ -31,7 +31,12 @@ const Navbar = ({ children }) => {
       {/* topbar */}
       <div className="flex w-full h-10 justify-between items-center flex-wrap px-4 2xl:px-[273px] bg-gray-400">
         <div>
-          <span className="bg-primary p-4 text-white text-sm">NOW HIRING</span>
+          <Link to="/employment-opportunities">
+            {" "}
+            <span className="bg-primary p-4 text-white text-sm">
+              NOW HIRING
+            </span>
+          </Link>
         </div>
         <div className="flex">
           <div className="hidden md:flex items-center bg-gray-500 py-3 px-2">
