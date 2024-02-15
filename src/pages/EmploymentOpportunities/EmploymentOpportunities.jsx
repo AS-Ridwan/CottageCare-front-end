@@ -7,12 +7,12 @@ const EmploymentOpportunities = () => {
     <>
       <section className="w-screen 2xl:px-64 mt-6 ">
         <div>EmploymentOpportunities page</div>
-        <div className=" grid grid-cols-1 sm:grid-cols-2 items-center  gap-20">
+        <div className=" grid grid-cols-1 sm:grid-cols-2 items-center ">
           {/* left side img */}
           {/* left side img */}
-          <div className=" flex justify-center  ">
+          <div className=" flex justify-center lg:justify-start mx-5 lg:mx-0 ">
             <img
-              className="h-auto max-w-lg w-2/3 lg:w-screen"
+              className="h-auto w-full lg:max-w-xl "
               src={employment}
               alt=""
             />
@@ -21,7 +21,7 @@ const EmploymentOpportunities = () => {
           {/* right side form */}
           {/* right side form */}
           <div className="flex flex-col items-center  justify-center">
-            <div className="w-full bg-accent rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 ">
+            <div className="w-full bg-accent rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 ">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
                 <h1 className="text-xl font-medium leading-tight tracking-tight text-secondary  md:text-2xl ">
                   Create your account to get full access!
@@ -89,7 +89,7 @@ const EmploymentOpportunities = () => {
                       name="email"
                       id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
-                      placeholder="name@company.com"
+                      placeholder="name@gmail.com"
                       required=""
                     />
                   </div>
