@@ -1,8 +1,21 @@
 import React from "react";
 
 import employment from "../../assets/employment.png";
+import { Controller, useForm } from "react-hook-form";
+import Select from "react-select";
 
 const EmploymentOpportunities = () => {
+  const {
+    register,
+    handleSubmit,
+    control,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = async (data) => {
+    console.log("data", data);
+  };
+
   return (
     <>
       <section className="w-screen 2xl:px-64 mt-6 ">
@@ -24,9 +37,13 @@ const EmploymentOpportunities = () => {
             <div className="w-full bg-accent rounded-lg shadow dark:border md:mt-0 sm:max-w-xl xl:p-0 ">
               <div className="p-6 space-y-4 md:space-y-6 sm:p-8 ">
                 <h1 className="text-xl font-medium leading-tight tracking-tight text-secondary  md:text-2xl ">
-                  Create your account to get full access!
+                  Please Provide your details here!
                 </h1>
-                <form className="space-y-4 md:space-y-6" action="#">
+                <form
+                  onSubmit={handleSubmit(onSubmit)}
+                  className="space-y-4 md:space-y-6"
+                  action="#"
+                >
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div>
                       <label
@@ -37,11 +54,14 @@ const EmploymentOpportunities = () => {
                       </label>
                       <input
                         type="text"
-                        name="name"
-                        id="name"
                         className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                         placeholder="First Name"
-                        required=""
+                        {...register("firstName", {
+                          required: {
+                            value: true,
+                            message: "FirstName is required",
+                          },
+                        })}
                       />
                     </div>
                     <div>
@@ -53,11 +73,14 @@ const EmploymentOpportunities = () => {
                       </label>
                       <input
                         type="text"
-                        name="name"
-                        id="name"
                         className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                         placeholder="Last Name"
-                        required=""
+                        {...register("lastName", {
+                          required: {
+                            value: true,
+                            message: "LastName is required",
+                          },
+                        })}
                       />
                     </div>
                   </div>
@@ -70,11 +93,14 @@ const EmploymentOpportunities = () => {
                     </label>
                     <input
                       type="number"
-                      name="number"
-                      id="number"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                       placeholder="Your Number"
-                      required=""
+                      {...register("number", {
+                        required: {
+                          value: true,
+                          message: "Number is required",
+                        },
+                      })}
                     />
                   </div>
                   <div>
@@ -86,21 +112,29 @@ const EmploymentOpportunities = () => {
                     </label>
                     <input
                       type="email"
-                      name="email"
-                      id="email"
                       className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 "
                       placeholder="name@gmail.com"
-                      required=""
+                      {...register("email", {
+                        required: {
+                          value: true,
+                          message: "Email is required",
+                        },
+                      })}
                     />
                   </div>
                   <div>
                     <label for="choice"> At Least 18 years of Age?</label>
-                    <input
-                      type="checkbox"
-                      id="choice"
-                      className="ms-3"
-                      name="choice"
-                      value=""
+                    <Controller
+                      name="MyCheckbox"
+                      control={control}
+                      rules={{ required: true }}
+                      render={({ field }) => (
+                        <input
+                          type="checkbox"
+                          className="checkbox"
+                          {...field}
+                        />
+                      )}
                     />
                   </div>
 
@@ -110,15 +144,41 @@ const EmploymentOpportunities = () => {
                       Interested in Which Metro Area?(Required)
                     </label>
 
-                    <select className=" select select-bordered  w-full ">
-                      <option selected>Akron, OH</option>
-                      <option>Barboursville, WV</option>
-                      <option>Baton Rouge, LA</option>
-                      <option>Bloomington, IL</option>
-                      <option>Calgary North Central</option>
-                      <option>Calgary South</option>
-                      <option>Milwaukee/North, WI</option>
-                    </select>
+                    <Controller
+                      name="areaName"
+                      control={control}
+                      render={({ field }) => (
+                        <Select
+                          className="select-bordered  w-full "
+                          {...field}
+                          options={[
+                            { value: "Akron, OH", label: "Akron, OH" },
+                            {
+                              value: "Barboursville, WV",
+                              label: "Barboursville, WV",
+                            },
+                            {
+                              value: "Baton Rouge, LA",
+                              label: "Baton Rouge, LA",
+                            },
+                            {
+                              value: "Bloomington, IL",
+                              label: "Bloomington, IL",
+                            },
+                            {
+                              value: "Calgary North Central",
+                              label: "Calgary North Central",
+                            },
+                            { value: "Calgary South", label: "Calgary South" },
+                            {
+                              value: "Milwaukee/North, WI",
+                              label: "Milwaukee/North, WI",
+                            },
+                          ]}
+                          isClearable
+                        />
+                      )}
+                    />
                   </div>
                   <div>
                     <label for="input">
@@ -126,22 +186,46 @@ const EmploymentOpportunities = () => {
                       How did you hear about us?(Required)
                     </label>
 
-                    <select className=" select select-bordered  w-full ">
-                      <option selected>Instagram</option>
-                      <option>Facebook</option>
-                      <option>CottageCare Website</option>
-                      <option>Nextdoor</option>
-                      <option>Referral</option>
-                      <option>Indeed</option>
-                      <option>Other</option>
-                    </select>
+                    <Controller
+                      name="socialName"
+                      control={control}
+                      render={({ field }) => (
+                        <Select
+                          className="select-bordered  w-full "
+                          {...field}
+                          options={[
+                            {
+                              value: "Instagram",
+                              label: "Instagram",
+                            },
+                            { value: "Facebook", label: "Facebook" },
+                            {
+                              value: "CottageCare Website",
+                              label: "CottageCare Website",
+                            },
+                            { value: "Nextdoor", label: "Nextdoor" },
+                            { value: "Referral", label: "Referral" },
+                            { value: "Indeed", label: "Indeed" },
+                            { value: "Other", label: "Other" },
+                          ]}
+                          isClearable
+                        />
+                      )}
+                    />
                   </div>
                   <div>
                     <div>
                       <label for="input"> Resume</label>
                       <input
                         type="file"
+                        accept=".pdf"
                         className="file-input file-input-bordered file-input-secondary w-full "
+                        {...register("resume", {
+                          required: {
+                            value: true,
+                            message: "Resume is required",
+                          },
+                        })}
                       />
                     </div>
                     <small>Max. file size: 50 MB.</small>
