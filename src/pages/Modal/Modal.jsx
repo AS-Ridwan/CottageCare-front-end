@@ -5,7 +5,7 @@ const Modal = () => {
     <>
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box text-center">
-          <h2 className="font-bold text-lg">
+          <h2 className="font-bold text-2xl text-primary">
             Save 10% Off Your First Cleaning
           </h2>
           <p className="py-4">
@@ -15,12 +15,15 @@ const Modal = () => {
           <form action="">
             <div>
               <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered input-accent w-full max-w-xs"
+                type="email"
+                placeholder="Enter you email here"
+                className="input input-bordered w-full max-w-md my-8"
               />
             </div>
-            <button type="submit" className="btn">
+            <button
+              type="submit"
+              className="btn w-full bg-primary text-accent max-w-md"
+            >
               Submit
             </button>
           </form>
