@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import homeClean from "../../assets/House Cleaning Services & Housekeeping » CottageCare.mp4";
 
 const Hero = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      const modal = document.getElementById("my_modal_2");
+      modal.showModal();
+    }, 2000);
+  }, []);
+
   return (
     <div>
       <video

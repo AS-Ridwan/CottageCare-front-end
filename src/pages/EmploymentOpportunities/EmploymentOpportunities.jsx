@@ -12,10 +12,26 @@ const EmploymentOpportunities = () => {
     formState: { errors },
   } = useForm();
 
+  const imageStorageKey = "3f4c9acd2ebf3ddef70e56d60e590770";
+
   const onSubmit = async (data) => {
     console.log("data", data);
-  };
+    const image = data.resume[0];
 
+    const formData = new FormData();
+    formData.append("image", image);
+
+    const url = `https://api.imgbb.com/1/upload?key=${imageStorageKey}`;
+
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("imbb", result);
+      });
+  };
   return (
     <>
       <section className="w-screen 2xl:px-64 mt-6 ">
