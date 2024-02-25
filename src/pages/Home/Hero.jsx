@@ -20,7 +20,8 @@ const Hero = () => {
       >
         <source src={homeClean} type="video/mp4"></source>
       </video>
-      <div className="absolute inset-0 flex flex-col items-start justify-center 2xl:px-64">
+
+      <div className="absolute inset-0 flex flex-col items-start justify-center 2xl:px-64  top-0 left-0 w-full h-full bg-black bg-opacity-50">
         <h1 className="text-6xl font-semibold leading-tight text-white">
           Simplify life.
           <br /> Delegate housecleaning®
@@ -30,10 +31,10 @@ const Hero = () => {
           available, matched with great customer service.
         </p>
         <div className="mt-10">
-          <button className="bg-primary text-white rounded-full py-4 px-6 me-8">
+          <button className="bg-primary text-white rounded-full py-3 px-6 me-5">
             Book Online Now
           </button>
-          <button className="bg-accent text-secondary rounded-full py-4 px-6 ">
+          <button className="bg-accent text-secondary rounded-full py-3 px-6 ">
             Get A Quote
           </button>
         </div>
