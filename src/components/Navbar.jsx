@@ -29,7 +29,7 @@ const Navbar = ({ children }) => {
   return (
     <>
       {/* topbar */}
-      <div className="flex w-full h-10 justify-between items-center flex-wrap px-4 2xl:px-[273px] bg-gray-400">
+      <div className="flex w-full h-10 justify-between items-center flex-wrap px-4 2xl:px-[273px] bg-gray-400  ">
         <div>
           <Link to="/employment-opportunities">
             {" "}
@@ -60,7 +60,7 @@ const Navbar = ({ children }) => {
 
       {/* Navbar */}
       <nav>
-        <div className="drawer drawer-end">
+        <div className="drawer drawer-end ">
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col">
             <div className="w-screen navbar bg-accent 2xl:px-64">
