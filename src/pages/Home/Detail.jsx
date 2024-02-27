@@ -3,7 +3,7 @@ import React from "react";
 const Detail = () => {
   return (
     <>
-      <div className="my-20 py-20 bg-gray-50">
+      <div className="my-20 py-20 bg-accent">
         <div className="grid grid-cols-3   2xl:px-64">
           <div className="card w-96 bg-gray-200">
             <div className="card-body">
@@ -24,10 +24,10 @@ const Detail = () => {
                 </svg>
               </div>
 
-              <h2 className="card-title font-semibold text-2xl">
+              <h2 className="card-title font-semibold text-2xl text-black">
                 Instant Quotes
               </h2>
-              <p className="leading-8">
+              <p className="leading-8 text-black">
                 Other cleaning companies perform a walkthrough before giving you
                 an estimate. CottageCare was the first to innovate
                 over-the-phone pricing. We provide estimates solely based on the
@@ -54,10 +54,10 @@ const Detail = () => {
                 </svg>
               </div>
 
-              <h2 className="card-title font-semibold text-2xl">
+              <h2 className="card-title font-semibold text-2xl text-black">
                 No Rescheduling Fees
               </h2>
-              <p className="leading-8">
+              <p className="leading-8 text-black">
                 Your life is busy. Your schedule changes. The next thing you
                 know, people are visiting when you least expect it. We get it!
                 We understand that our customers’ lives are busy, and your
@@ -85,10 +85,10 @@ const Detail = () => {
                 </svg>
               </div>
 
-              <h2 className="card-title font-semibold text-2xl">
+              <h2 className="card-title font-semibold text-2xl text-black">
                 No Contracts
               </h2>
-              <p className="leading-8">
+              <p className="leading-8 text-black">
                 We realize our customers don’t want to get locked into lengthy
                 contracts. Sometimes when you’re stuck in a contract, the
                 quality can deteriorate over time. We choose to earn your
@@ -97,7 +97,7 @@ const Detail = () => {
             </div>
           </div>
         </div>
-        <div className="text-center mt-10">
+        <div className="text-center mt-10 text-secondary">
           <p>Flexible Scope of Work to Meet Your Desired Budget</p>
           <p className="flex justify-center items-center mt-4 font-semibold">
             Call{" "}
