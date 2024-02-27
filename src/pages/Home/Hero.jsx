@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <div className="relative">
       <video
-        className="w-screen h-[60vh] object-cover  "
+        className="w-screen h-[60vh] object-cover  brightness-50"
         autoPlay
         playsInline
         loop
@@ -21,7 +21,7 @@ const Hero = () => {
         <source src={homeClean} type="video/mp4"></source>
       </video>
 
-      <div className="absolute inset-0 flex flex-col items-start justify-center 2xl:px-64  top-0 left-0 w-full h-full bg-black bg-opacity-50">
+      <div className="absolute inset-0 flex flex-col items-start justify-center 2xl:px-64 ">
         <h1 className="text-6xl font-semibold leading-tight text-white">
           Simplify life.
           <br /> Delegate housecleaning®

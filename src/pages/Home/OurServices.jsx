@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import serviceImg from "../../assets/service-img.png";
 
 const OurServices = () => {
-  const [isHovered, setIsHovered] = useState(false);
   return (
     <>
       <div className="grid grid-cols-2  w-full   2xl:px-64 py-20">
@@ -20,9 +19,9 @@ const OurServices = () => {
             products.
           </p>
           <div className="grid grid-cols-3 gap-6 mt-10">
-            <div className="bg-gray-200 py-14  rounded-2xl flex flex-col  items-center">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer ">
               <svg
-                className="w-10 h-10 fill-primary hover:fill-orange-500 "
+                className="w-10 h-10 fill-primary group-hover:fill-white "
                 viewBox="0 0 24 24"
                 fill=""
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,22 +40,18 @@ const OurServices = () => {
                   ></path>{" "}
                 </g>
               </svg>
-              <p className="mt-5 text-secondary w-[50%] text-center">
-                Bathroom cleaning
+              <p className="mt-5 w-[50%] text-center text-secondary group-hover:text-white">
+                BATHROOM CLEANING
               </p>
             </div>
 
             <div
-              className={`py-14  rounded-2xl flex flex-col  items-center ${
-                isHovered ? "bg-primary " : "bg-gray-200"
-              }`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
+              className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer 
+               "
             >
               <svg
-                className={` w-10 h-10  ${
-                  isHovered ? "fill-white" : "fill-primary"
-                }`}
+                className=" w-10 h-10  
+                fill-primary group-hover:fill-white"
                 fill=""
                 viewBox="0 -0.65 122.88 122.88"
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,18 +74,19 @@ const OurServices = () => {
                   </g>{" "}
                 </g>
               </svg>
-              <p
-                className={` mt-5 w-[50%] text-center ${
-                  isHovered ? "text-white" : "text-secondary"
-                }`}
-              >
-                Bathroom cleaning
+              <p className="mt-5 w-[50%] text-center text-secondary group-hover:text-white">
+                VACCUMING
               </p>
             </div>
 
-            <div className="bg-gray-200 py-14  rounded-2xl flex flex-col  items-center">
+            <div
+              className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center
+             cursor-pointer
+        
+            "
+            >
               <svg
-                className="w-10 h-10 fill-primary hover:fill-orange-500 "
+                className="w-10 h-10 fill-primary group-hover:fill-white "
                 fill=""
                 viewBox="0 0 512 512"
                 version="1.1"
@@ -145,13 +141,13 @@ const OurServices = () => {
                   <g id="Layer_1"></g>{" "}
                 </g>
               </svg>
-              <p className="mt-5 text-secondary w-[50%] text-center">
-                Bathroom cleaning
+              <p className=" mt-5 text-secondary group-hover:text-white w-[50%] text-center">
+                DUSTING
               </p>
             </div>
-            <div className="bg-gray-200 py-14  rounded-2xl flex flex-col  items-center">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer">
               <svg
-                className="w-10 h-10 fill-primary hover:fill-orange-500 "
+                className="w-10 h-10 fill-primary group-hover:fill-white "
                 fill=""
                 viewBox="0 0 50 50"
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,13 +162,13 @@ const OurServices = () => {
                   <path d="M10 2C9.45 2 9 2.45 9 3L9 6.4902344L2.4199219 11.189453C2.1599219 11.369453 2 11.68 2 12L2 16C2 16.55 2.45 17 3 17L25 17C25.55 17 26 16.55 26 16L26 12C26 11.68 25.840078 11.369453 25.580078 11.189453L19 6.4902344L19 3C19 2.45 18.55 2 18 2L10 2 z M 6.9882812 22C6.4392812 22 5.9902344 22.45 5.9902344 23L5.9902344 24L1.9980469 24C1.4490469 24 1 24.45 1 25L1 47C1 47.55 1.4490469 48 1.9980469 48L25.808594 48C26.437594 48 26.945312 47.489375 26.945312 46.859375L26.945312 25.082031C26.945312 24.484031 26.462234 24 25.865234 24L21.955078 24L21.955078 23.134766C21.955078 22.507766 21.448266 22 20.822266 22L6.9882812 22 z M 30.085938 24C30.018937 23.998 29.591391 23.994938 29.275391 24.335938C29.030391 24.599938 29.005 24.91 29 25L29 32L49 32L49 25C49 24.45 48.550953 24 48.001953 24L45.90625 24L36.925781 24L30.085938 24 z M 5.9902344 28L21.957031 28C22.506031 28 22.955078 28.45 22.955078 29L22.955078 43C22.955078 43.55 22.506031 44 21.957031 44L5.9902344 44C5.4412344 44 4.9921875 43.55 4.9921875 43L4.9921875 29C4.9921875 28.45 5.4412344 28 5.9902344 28 z M 32.933594 28L44.908203 28C45.457203 28 45.90625 28.45 45.90625 29C45.90625 29.55 45.457203 30 44.908203 30L32.933594 30C32.384594 30 31.935547 29.55 31.935547 29C31.935547 28.45 32.384594 28 32.933594 28 z M 6.9882812 30L6.9882812 42L20.958984 42L20.958984 30L6.9882812 30 z M 29 34L29 47C29.002 47.083 29.018578 47.402828 29.267578 47.673828C29.575578 48.007828 29.992641 48.002 30.056641 48L48.001953 48C48.550953 48 49 47.55 49 47L49 34L29 34 z M 32.933594 37C33.482594 37 33.931641 37.45 33.931641 38L33.931641 43C33.931641 43.55 33.482594 44 32.933594 44C32.384594 44 31.935547 43.55 31.935547 43L31.935547 38C31.935547 37.45 32.384594 37 32.933594 37 z"></path>
                 </g>
               </svg>
-              <p className="mt-5 text-secondary w-[50%] text-center">
-                Bathroom cleaning
+              <p className="mt-5 text-secondary group-hover:text-white w-[50%] text-center">
+                KITCHEN CLEANING
               </p>
             </div>
-            <div className="bg-gray-200 py-14  rounded-2xl flex flex-col  items-center">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer">
               <svg
-                className="w-10 h-10 fill-primary hover:fill-orange-500 "
+                className="w-10 h-10 fill-primary group-hover:fill-white "
                 fill=""
                 version="1.1"
                 id="Layer_1"
@@ -272,13 +268,13 @@ const OurServices = () => {
                   </g>{" "}
                 </g>
               </svg>
-              <p className="mt-5 text-secondary w-[50%] text-center">
-                Bathroom cleaning
+              <p className="mt-5 text-secondary group-hover:text-white w-[50%] text-center">
+                HARD FLOOR CLEANING
               </p>
             </div>
-            <div className="bg-gray-200 py-14  rounded-2xl flex flex-col  items-center">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer">
               <svg
-                className="w-10 h-10 fill-primary hover:fill-orange-500 "
+                className="w-10 h-10 fill-primary group-hover:fill-white "
                 viewBox="0 0 24 24"
                 fill=""
                 xmlns="http://www.w3.org/2000/svg"
@@ -303,8 +299,8 @@ const OurServices = () => {
                   ></path>{" "}
                 </g>
               </svg>
-              <p className="mt-5 text-secondary w-[50%] text-center">
-                Bathroom cleaning
+              <p className="mt-5 text-secondary group-hover:text-white w-[50%] text-center">
+                TAILORED CLEANING
               </p>
             </div>
           </div>
