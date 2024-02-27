@@ -18,8 +18,8 @@ const OurServices = () => {
             were eco-friendly before the recent popular trend of all natural
             products.
           </p>
-          <div className="grid grid-cols-3 gap-6 mt-10">
-            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer ">
+          <div className="grid grid-cols-3 gap-6 mt-10 ">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer duration-500 ">
               <svg
                 className="w-10 h-10 fill-primary group-hover:fill-white "
                 viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ const OurServices = () => {
 
             <div
               className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer 
-               "
+              duration-500"
             >
               <svg
                 className=" w-10 h-10  
@@ -81,7 +81,7 @@ const OurServices = () => {
 
             <div
               className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center
-             cursor-pointer
+             cursor-pointer duration-500
         
             "
             >
@@ -145,7 +145,7 @@ const OurServices = () => {
                 DUSTING
               </p>
             </div>
-            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer duration-500">
               <svg
                 className="w-10 h-10 fill-primary group-hover:fill-white "
                 fill=""
@@ -166,7 +166,7 @@ const OurServices = () => {
                 KITCHEN CLEANING
               </p>
             </div>
-            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer duration-500">
               <svg
                 className="w-10 h-10 fill-primary group-hover:fill-white "
                 fill=""
@@ -272,7 +272,7 @@ const OurServices = () => {
                 HARD FLOOR CLEANING
               </p>
             </div>
-            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer">
+            <div className="group hover:bg-primary bg-gray-200 py-14  rounded-2xl flex flex-col  items-center cursor-pointer duration-500">
               <svg
                 className="w-10 h-10 fill-primary group-hover:fill-white "
                 viewBox="0 0 24 24"
