@@ -29,7 +29,7 @@ const Navbar = ({ children }) => {
   return (
     <>
       {/* topbar */}
-      <div className="flex w-full h-10 justify-between items-center flex-wrap px-4 2xl:px-[273px] bg-gray-400  ">
+      <div className="flex w-full h-10 justify-between items-center flex-wrap px-4 2xl:px-[273px] bg-black ">
         <div>
           <Link to="/employment-opportunities">
             {" "}
@@ -39,7 +39,7 @@ const Navbar = ({ children }) => {
           </Link>
         </div>
         <div className="flex">
-          <div className="hidden md:flex items-center bg-gray-500 py-3 px-2">
+          <div className="hidden md:flex items-center bg-primary py-3 px-2">
             <span>
               <PhoneIcon class="h-4 w-4 text-white" />
             </span>
@@ -64,8 +64,8 @@ const Navbar = ({ children }) => {
           <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content flex flex-col">
             <div className="w-screen navbar bg-accent 2xl:px-64">
-              <div className="flex-1 px-2 mx-2 font-bold text-2xl text-secondary">
-                CottageCare
+              <div className="flex-1 px-2 mx-2 font-semibold text-2xl text-secondary">
+                Cottage<span className="text-primary">Care</span>
               </div>
               <div className="flex-none lg:hidden">
                 {/* ///////////// */}
