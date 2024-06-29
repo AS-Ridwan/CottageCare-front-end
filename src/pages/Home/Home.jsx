@@ -5,6 +5,7 @@ import Modal from "../Modal/Modal";
 import OurServices from "./OurServices";
 import Detail from "./Detail";
 import DependableClean from "./DependableClean";
+import Location from "./Location";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <OurServices></OurServices>
       <Detail></Detail>
       <DependableClean></DependableClean>
+      <Location></Location>
       <Experience></Experience>
       <Modal></Modal>
     </div>
