@@ -12,7 +12,9 @@ const Hero = () => {
   return (
     <div className="relative">
       <video
-        className="w-screen h-[60vh] object-cover  brightness-50"
+        className="w-screen h-[60vh] object-cover  brightness-50
+        
+        "
         autoPlay
         playsInline
         loop

@@ -29,6 +29,35 @@ const Location = () => {
           CottageCare consistently receives the highest quality reviews from our
           customers across the country.
         </p>
+        <div className="mt-4 flex">
+          <p className=" text-lg me-5  flex">
+            <p className="text-2xl me-2">
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </p>{" "}
+            <strong className="text-gray-600"> 40+ Locations</strong>{" "}
+          </p>
+          <p className=" text-lg flex ">
+            <p className="text-2xl me-2">
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </p>{" "}
+            <strong className="text-gray-600">
+              {" "}
+              45+ Years in the Business
+            </strong>{" "}
+          </p>
+        </div>
+        <div className="mt-4 flex">
+          <button className="bg-primary text-white rounded-full py-3 px-6 me-5">
+            Find a Location Close to You!
+          </button>
+          <p className="ms-4 flex items-center">
+            Call{" "}
+            <p className=" w-10 h-10 bg-blue-200  p-3 rounded-full  mx-2">
+              <ion-icon name="call"></ion-icon>
+            </p>{" "}
+            1-700-474-7730
+          </p>
+        </div>
       </div>
     </div>
   );

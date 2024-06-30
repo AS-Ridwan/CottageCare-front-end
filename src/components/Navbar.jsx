@@ -44,7 +44,7 @@ const Navbar = ({ children }) => {
               <PhoneIcon class="h-4 w-4 text-white" />
             </span>
             <span className="text-white ms-2  text-sm ">
-              CALL CottageCare <a href="tel:1-800-476-7830">1-800-476-7830</a>
+              CALL CottageCare <a href="tel:1-800-476-7830"> 1-700-474-7730</a>
             </span>
           </div>
           <div className="flex items-center ms-5">
